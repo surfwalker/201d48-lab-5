@@ -90,8 +90,6 @@ function sumArray(sumArr) { //eslint-disable-line
 	}
 	var messageSum = testArray + ' was passed in as an array of numbers, and ' + outputSum + ' is their sum.';
 	return [outputSum, messageSum];
-  var messageSum = testArray + ' was passed in as an array of numbers, and ' + outputSum + ' is their sum.';
-  return [outputSum, messageSum];
 }
 
 // Here is the test for sumArray(); uncomment it to run it

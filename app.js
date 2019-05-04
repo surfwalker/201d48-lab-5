@@ -88,8 +88,13 @@ function sumArray(sumArr) { //eslint-disable-line
 	} else {
 		return "There are not enough items in this array.";
 	}
+<<<<<<< HEAD
 	var messageSum = testArray + ' was passed in as an array of numbers, and ' + outputSum + ' is their sum.';
 	return [outputSum, messageSum];
+=======
+  var messageSum = testArray + ' was passed in as an array of numbers, and ' + outputSum + ' is their sum.';
+  return [outputSum, messageSum];
+>>>>>>> df1a575af5b8c18fdd64b82c1ac64a33b51c3b31
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -110,11 +115,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+	var outputMultiply = multArr[0];
+	if(multArr.length > 1) {
+		for(var i = 1; i < multArr.length; i++) {
+			outputMultiply = multiply(outputMultiply, multArr[i])[0];
+		}
+	} else {
+		return "There are not enough items in this array.";
+	}
+  var messageMultiply = 'The numbers ' + testArray + ' have a product of ' + outputMultiply + '.';
+  return [outputMultiply, messageMultiply];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -138,10 +152,19 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+	var outputMultiplyAny = dynamicArray[0];
+	if(dynamicArray.length > 1) {
+		for(var i = 1; i < dynamicArray.length; i++) {
+			outputMultiplyAny = multiply(outputMultiplyAny, dynamicArray[i])[0];
+		}
+	} else {
+		return "There are not enough items in this array.";
+	}
+  var messageMultiplyAny = 'The numbers ' + testDynamicArray + ' have a product of ' + outputMultiplyAny + '.';
+  return [outputMultiplyAny, messageMultiplyAny];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.

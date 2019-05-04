@@ -88,13 +88,10 @@ function sumArray(sumArr) { //eslint-disable-line
 	} else {
 		return "There are not enough items in this array.";
 	}
-<<<<<<< HEAD
 	var messageSum = testArray + ' was passed in as an array of numbers, and ' + outputSum + ' is their sum.';
 	return [outputSum, messageSum];
-=======
   var messageSum = testArray + ' was passed in as an array of numbers, and ' + outputSum + ' is their sum.';
   return [outputSum, messageSum];
->>>>>>> df1a575af5b8c18fdd64b82c1ac64a33b51c3b31
 }
 
 // Here is the test for sumArray(); uncomment it to run it

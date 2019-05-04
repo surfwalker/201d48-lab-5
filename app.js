@@ -150,7 +150,7 @@ var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 	var outputMultiplyAny = dynamicArray[0];
-	if(dynamicArray.length > 1) {
+	if(dynamicArray.length > ) {
 		for(var i = 1; i < dynamicArray.length; i++) {
 			outputMultiplyAny = multiply(outputMultiplyAny, dynamicArray[i])[0];
 		}

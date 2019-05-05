@@ -147,15 +147,18 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-	var outputMultiplyAny = dynamicArray[0];
-	if(dynamicArray.length > 1) {
-		for(var i = 1; i < dynamicArray.length; i++) {
-			outputMultiplyAny = multiply(outputMultiplyAny, dynamicArray[i])[0];
-		}
-	} else {
-		return "There are not enough items in this array.";
-	}
-  var messageMultiplyAny = 'The numbers ' + testDynamicArray + ' have a product of ' + outputMultiplyAny + '.';
+    var messageMultiplyAny = [];
+    messageMultiplyAny.push(dynamicArray[0]);
+    var outputMultiplyAny = dynamicArray[0];
+    if(dynamicArray.length > 1) {
+        for(var i = 1; i < dynamicArray.length; i++) {
+            outputMultiplyAny = multiply(outputMultiplyAny, dynamicArray[i])[0];
+            messageMultiplyAny.push(dynamicArray[i]);
+        }
+    } else {
+        return "There are not enough items in this array.";
+    }
+  messageMultiplyAny = 'The numbers ' + dynamicArray + ' have a product of ' + outputMultiplyAny + '.';
   return [outputMultiplyAny, messageMultiplyAny];
 }
 
